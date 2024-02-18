@@ -13,12 +13,6 @@ jobs:
           repository: Swa-DevOps/aem-guides-wknd
           ref: refs/heads/scripts
 
-      - name: Checkout main branch code
-        uses: actions/checkout@v2
-        with:
-          repository: Swa-DevOps/aem-guides-wknd
-          ref: refs/heads/main
-
       - name: Run sonar
         run: |
           chmod +x sonar-scan.sh && bash sonar-scan.sh
