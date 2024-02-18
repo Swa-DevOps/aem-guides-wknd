@@ -1,4 +1,5 @@
 #!/bin/bash
+git pull https://github.com/Swa-DevOps/aem-guides-wknd.git main
 export PATH=/opt/apache-maven-3.9.6/bin:$PATH
 export JAVA_HOME=/opt/jdk-17.0.2
 mvn clean install
