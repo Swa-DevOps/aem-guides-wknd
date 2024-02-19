@@ -12,8 +12,8 @@ jobs:
  
       - name: Clone scripts branch
         run: |
-          mkdir -p scripts_folder
-          git clone --scripts --single-branch https://github.com/Swa-DevOps/aem-guides-wknd.git scripts_folder/
+          mkdir scripts_folder
+          git clone --branch scripts --single-branch https://github.com/Swa-DevOps/aem-guides-wknd.git scripts_folder/
           pwd && ll scripts_folder/
           mv scripts_folder/* .
           pwd && ll
