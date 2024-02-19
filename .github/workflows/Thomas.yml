@@ -14,11 +14,10 @@ jobs:
         run: |
           mkdir scripts_folder
           git clone --branch scripts --single-branch https://github.com/Swa-DevOps/aem-guides-wknd.git scripts_folder/
-          pwd && ll scripts_folder/
+          pwd
           mv scripts_folder/* .
-          pwd && ll
+          pwd
  
       - name: Run sonar
         run: |
-          ll 
           chmod +x sonar-scan.sh && bash sonar-scan.sh
