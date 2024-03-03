@@ -9,16 +9,10 @@ jobs:
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
- 
-      - name: Clone scripts branch
-        run: |
-          mkdir scripts_folder
-          git clone --branch scripts --single-branch https://github.com/Swa-DevOps/aem-guides-wknd.git scripts_folder/
-          pwd
-          mv scripts_folder/* .
-          pwd
+      - name: Setup Java JDK
+        uses: actions/setup-java@v17.0.2
       - name: Build and analyze
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_TOKEN: "63a6b34b9943b07703025bae65c0952ba09ce8e6"
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=swa-devops_aem-wknd-2
           
