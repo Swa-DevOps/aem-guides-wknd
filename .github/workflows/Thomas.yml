@@ -12,7 +12,8 @@ jobs:
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
-          java-version: '17'
+          java-version: 17
+          distribution: 'zulu' # 
       - name: Build and analyze
         env:
           SONAR_TOKEN: "63a6b34b9943b07703025bae65c0952ba09ce8e6"
