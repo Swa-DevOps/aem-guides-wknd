@@ -6,6 +6,10 @@ on:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        config:
+          - cores: 4
     steps:
       - name: Checkout main branch
         uses: actions/checkout@v2
